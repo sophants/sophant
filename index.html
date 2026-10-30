@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Informatika - Mahasiswa Baru</title>
+  <!-- Google Fonts & Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/80 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#hero" class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent">
+        Portofolio.
+      </a>
+      <div class="hidden sm:flex items-center space-x-6 text-sm font-medium text-slate-600">
+        <a href="#about" class="hover:text-indigo-600 transition">About Me</a>
+        <a href="#skills" class="hover:text-indigo-600 transition">What I Can Do</a>
+        <a href="#achievement" class="hover:text-indigo-600 transition">Achievement</a>
+        <a href="#contact" class="hover:text-indigo-600 transition">Contact</a>
+      </div>
+      <button onclick="openModal()" class="text-xs sm:text-sm font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-600 border border-indigo-200 px-3 py-1.5 rounded-lg transition">
+        ✏️ Edit Data
+      </button>
+    </div>
+  </nav>
+
+  <!-- TAMPILAN AWAL / HERO SECTION -->
+  <section id="hero" class="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="flex-1 text-center md:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+            <span id="h-prodi">Mahasiswa Baru Informatika</span>
+          </div>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+            Halo, Saya <br><span id="h-name" class="text-indigo-600">Nama Lengkap</span>
+          </h1>
+          <p id="h-tag" class="text-base sm:text-lg text-slate-600 max-w-xl mb-8 leading-relaxed">
+            Mahasiswa baru Informatika yang bersemangat mempelajari pengembangan perangkat lunak, teknologi web, dan solusi berbasis kecerdasan buatan.
+          </p>
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-4">
+            <a href="#achievement" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-indigo-200 transition">
+              Lihat Pencapaian
+            </a>
+            <a href="#contact" class="bg-white hover:bg-slate-100 text-slate-700 font-semibold px-6 py-3 rounded-xl border border-slate-200 transition">
+              Hubungi Saya
+            </a>
+          </div>
+        </div>
+        <!-- Avatar / Graphic Card -->
+        <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-3xl bg-gradient-to-tr from-indigo-500 to-violet-500 p-1.5 shadow-xl flex-shrink-0">
+          <div class="w-full h-full bg-white rounded-[22px] flex flex-col items-center justify-center text-slate-400 p-6 text-center">
+            <div class="w-20 h-20 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center text-3xl font-bold mb-3">
+              👨‍💻
+            </div>
+            <span class="text-xs font-semibold text-slate-500">Informatika 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: ABOUT ME -->
+  <section id="about" class="py-16 bg-white border-y border-slate-200/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">About Me</h2>
+        <p class="text-slate-500 text-sm mt-1">Profil singkat, statistik, pendidikan, dan aktivitas saya saat ini.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Profile Card -->
+        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4">Informasi Utama</h3>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="text-slate-400 text-xs">Nama Lengkap</dt>
+              <dd id="a-nama" class="font-semibold text-slate-800">Nama Lengkap Kamu</dd>
+            </div>
+            <div>
+              <dt class="text-slate-400 text-xs">NIM</dt>
+              <dd id="a-nim" class="font-semibold text-slate-800">25xxxxxxxx</dd>
+            </div>
+            <div>
+              <dt class="text-slate-400 text-xs">Program Studi</dt>
+              <dd id="a-prodi" class="font-semibold text-slate-800">Informatika</dd>
+            </div>
+          </dl>
+
+          <div class="mt-6 pt-6 border-t border-slate-200 grid grid-cols-3 gap-2 text-center" id="a-stats">
+            <div>
+              <span class="block text-xl font-bold text-indigo-600">3</span>
+              <span class="text-[10px] text-slate-500">Proyek</span>
+            </div>
+            <div>
+              <span class="block text-xl font-bold text-indigo-600">2</span>
+              <span class="text-[10px] text-slate-500">Sertifikat</span>
+            </div>
+            <div>
+              <span class="block text-xl font-bold text-indigo-600">1</span>
+              <span class="text-[10px] text-slate-500">Organisasi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Description & Activities -->
+        <div class="md:col-span-2 space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Deskripsi Singkat</h3>
+            <p id="a-desc" class="text-slate-600 text-sm leading-relaxed">
+              Saya mahasiswa baru Informatika yang memiliki minat besar pada teknologi informasi, pemecahan masalah dengan algoritma, serta pembuatan aplikasi web modern.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Riwayat Pendidikan</h4>
+              <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside" id="a-edu">
+                <li>S1 Informatika - Universitas (2025 - Sekarang)</li>
+                <li>SMA/SMK (Lulus 2025)</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-2">Aktivitas Saat Ini</h4>
+              <ul class="text-xs text-slate-600 space-y-1.5 list-disc list-inside" id="a-act">
+                <li>Membuat proyek portofolio berbasis AI</li>
+                <li>Mempelajari dasar Web Development</li>
+                <li>Aktif dalam kegiatan perkuliahan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: WHAT I CAN DO -->
+  <section id="skills" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">What I Can Do</h2>
+        <p class="text-slate-500 text-sm mt-1">Kemampuan, keahlian, serta tools yang dikuasai.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4" id="s-list">
+        <!-- Skill Item Sample -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+          <h3 class="font-bold text-slate-900 text-sm mb-1">Pemrograman Web</h3>
+          <p class="text-xs text-slate-500 mb-3">HTML, CSS, JavaScript untuk membuat halaman web responsif.</p>
+          <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+            <div class="bg-indigo-600 h-full w-3/5"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Tools yang Digunakan</h3>
+        <div class="flex flex-wrap gap-2" id="s-tools">
+          <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-700">VS Code</span>
+          <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Git & GitHub</span>
+          <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-700">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: ACHIEVEMENT -->
+  <section id="achievement" class="py-16 bg-white border-t border-slate-200/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Achievement</h2>
+        <p class="text-slate-500 text-sm mt-1">Daftar pencapaian, sertifikasi, dan kompetisi yang pernah diikuti.</p>
+      </div>
+
+      <div class="relative border-l-2 border-indigo-100 ml-3 space-y-8" id="ach-list">
+        <!-- Item Achievement -->
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
+          <span class="text-xs font-bold text-indigo-600">2026</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">Juara 2 Lomba Desain Web</h3>
+          <p class="text-xs text-indigo-500 font-medium mb-1">Penyelenggara Komunitas IT</p>
+          <p class="text-xs text-slate-600">Membuat antarmuka web yang responsif dan ramah pengguna.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: CONTACT -->
+  <section id="contact" class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Contact</h2>
+        <p id="c-text" class="text-slate-500 text-sm mt-1">Terbuka untuk diskusi, kolaborasi, dan peluang magang.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4" id="c-list">
+        <a href="mailto:email@example.com" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 transition group">
+          <span class="block text-xs text-slate-400 group-hover:text-indigo-500">Email</span>
+          <span id="c-email" class="text-sm font-semibold text-slate-800 truncate block">email@example.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-white border-t border-slate-200 text-center text-xs text-slate-400">
+    <p id="foot">© 2026 Nama Lengkap. Dibuat untuk Portofolio Informatika.</p>
+  </footer>
+
+  <!-- Modal Edit Data -->
+  <div id="modal" class="fixed inset-0 z-50 bg-slate-900/40 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-slate-100 max-h-[90vh] overflow-y-auto">
+      <h3 class="text-lg font-bold text-slate-900 mb-4">Edit Data Profil</h3>
+      <div class="space-y-3 text-sm">
+        <div>
+          <label class="text-xs font-semibold text-slate-600">Nama Lengkap</label>
+          <input type="text" id="inp-nama" class="w-full mt-1 p-2 border border-slate-200 rounded-lg">
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-600">NIM</label>
+          <input type="text" id="inp-nim" class="w-full mt-1 p-2 border border-slate-200 rounded-lg">
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-600">Program Studi</label>
+          <input type="text" id="inp-prodi" class="w-full mt-1 p-2 border border-slate-200 rounded-lg">
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-600">Tagline / Sub-judul</label>
+          <input type="text" id="inp-tag" class="w-full mt-1 p-2 border border-slate-200 rounded-lg">
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-600">Deskripsi Singkat</label>
+          <textarea id="inp-desc" rows="3" class="w-full mt-1 p-2 border border-slate-200 rounded-lg"></textarea>
+        </div>
+        <div>
+          <label class="text-xs font-semibold text-slate-600">Email</label>
+          <input type="text" id="inp-email" class="w-full mt-1 p-2 border border-slate-200 rounded-lg">
+        </div>
+      </div>
+      <div class="flex justify-end gap-2 mt-6">
+        <button onclick="closeModal()" class="px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-slate-100 rounded-lg">Batal</button>
+        <button onclick="saveData()" class="px-4 py-2 text-xs font-semibold bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Simpan</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var DATA = {
+      nama: "Nama Lengkap Kamu",
+      nim: "25xxxxxxxx",
+      prodi: "Informatika",
+      tagline: "Mahasiswa baru Informatika yang bersemangat mempelajari pengembangan perangkat lunak, teknologi web, dan solusi berbasis AI.",
+      deskripsi: "Saya mahasiswa baru Informatika yang memiliki minat besar pada teknologi informasi, pemecahan masalah dengan algoritma, serta pembuatan aplikasi web modern.",
+      stats: [["3","Proyek"],["2","Sertifikat"],["1","Organisasi"]],
+      pendidikan: ["S1 Informatika (2025 - Sekarang)","SMA/SMK (Lulus 2025)"],
+      aktivitas: ["Membuat proyek portofolio berbasis AI","Mempelajari dasar Web Development","Aktif dalam kegiatan perkuliahan"],
+      skills: [
+        {n:"Pemrograman Web", d:"HTML, CSS, JavaScript dasar untuk halaman web."},
+        {n:"Python", d:"Skrip dasaran dan logika algoritma."},
+        {n:"Git & GitHub", d:"Manajemen repositori dan kontrol versi."}
+      ],
+      tools: ["VS Code", "Git & GitHub", "Python", "Tailwind CSS", "Figma"],
+      ach: [
+        {nama:"Juara 2 Lomba Desain Web", tahun:"2026", org:"Komunitas IT Kampus", desc:"Membuat antarmuka web yang responsif dan ramah pengguna dalam waktu 48 jam."},
+        {nama:"Sertifikat Dasar Pemrograman", tahun:"2026", org:"Platform Edukasi IT", desc:"Menyelesaikan pelatihan dasar logika pemrograman."}
+      ],
+      kontak: {
+        teks: "Terbuka untuk diskusi, kolaborasi, dan peluang magang.",
+        email: "email@example.com",
+        github: "https://github.com/username",
+        linkedin: "https://linkedin.com/in/username",
+        cv: "https://example.com/cv.pdf"
+      }
+    };
+
+    function $(id){ return document.getElementById(id); }
+
+    function render(){
+      $("h-prodi").textContent = "Mahasiswa Baru " + DATA.prodi;
+      $("h-name").textContent = DATA.nama;
+      $("h-tag").textContent = DATA.tagline;
+
+      $("a-nama").textContent = DATA.nama;
+      $("a-nim").textContent = DATA.nim;
+      $("a-prodi").textContent = DATA.prodi;
+      $("a-desc").textContent = DATA.deskripsi;
+
+      $("a-edu").innerHTML = DATA.pendidikan.map(e => `<li>${e}</li>`).join("");
+      $("a-act").innerHTML = DATA.aktivitas.map(a => `<li>${a}</li>`).join("");
+
+      $("s-list").innerHTML = DATA.skills.map(s => `
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm">
+          <h3 class="font-bold text-slate-900 text-sm mb-1">${s.n}</h3>
+          <p class="text-xs text-slate-500 leading-relaxed">${s.d}</p>
+        </div>
+      `).join("");
+
+      $("s-tools").innerHTML = DATA.tools.map(t => `
+        <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-medium text-slate-700">${t}</span>
+      `).join("");
+
+      $("ach-list").innerHTML = DATA.ach.map(a => `
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-indigo-600 border-4 border-white"></div>
+          <span class="text-xs font-bold text-indigo-600">${a.tahun}</span>
+          <h3 class="text-base font-bold text-slate-900 mt-0.5">${a.nama}</h3>
+          <p class="text-xs text-indigo-500 font-medium mb-1">${a.org}</p>
+          <p class="text-xs text-slate-600 leading-relaxed">${a.desc}</p>
+        </div>
+      `).join("");
+
+      $("c-text").textContent = DATA.kontak.teks;
+      $("c-list").innerHTML = `
+        <a href="mailto:${DATA.kontak.email}" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 transition">
+          <span class="block text-xs text-slate-400">Email</span>
+          <span class="text-sm font-semibold text-slate-800 truncate block">${DATA.kontak.email}</span>
+        </a>
+        <a href="${DATA.kontak.github}" target="_blank" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 transition">
+          <span class="block text-xs text-slate-400">GitHub</span>
+          <span class="text-sm font-semibold text-slate-800 truncate block">GitHub Profile</span>
+        </a>
+        <a href="${DATA.kontak.linkedin}" target="_blank" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 transition">
+          <span class="block text-xs text-slate-400">LinkedIn</span>
+          <span class="text-sm font-semibold text-slate-800 truncate block">LinkedIn Profile</span>
+        </a>
+        <a href="${DATA.kontak.cv}" target="_blank" class="bg-white p-4 rounded-xl border border-slate-200 hover:border-indigo-500 transition">
+          <span class="block text-xs text-slate-400">Resume / CV</span>
+          <span class="text-sm font-semibold text-slate-800 truncate block">Unduh CV</span>
+        </a>
+      `;
+
+      $("foot").textContent = `© 2026 ${DATA.nama}. Portofolio Mahasiswa Baru Informatika.`;
+    }
+
+    function openModal(){
+      $("inp-nama").value = DATA.nama;
+      $("inp-nim").value = DATA.nim;
+      $("inp-prodi").value = DATA.prodi;
+      $("inp-tag").value = DATA.tagline;
+      $("inp-desc").value = DATA.deskripsi;
+      $("inp-email").value = DATA.kontak.email;
+      $("modal").classList.remove("hidden");
+      $("modal").classList.add("flex");
+    }
+
+    function closeModal(){
+      $("modal").classList.add("hidden");
+      $("modal").classList.remove("flex");
+    }
+
+    function saveData(){
+      DATA.nama = $("inp-nama").value;
+      DATA.nim = $("inp-nim").value;
+      DATA.prodi = $("inp-prodi").value;
+      DATA.tagline = $("inp-tag").value;
+      DATA.deskripsi = $("inp-desc").value;
+      DATA.kontak.email = $("inp-email").value;
+      render();
+      closeModal();
+    }
+
+    render();
+  </script>
+</body>
+</html>
